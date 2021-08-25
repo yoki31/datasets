@@ -137,6 +137,18 @@ Selecting a configuration is done by providing :func:`datasets.load_dataset` wit
         })
     })
 
+Specify custom data files
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Certain dataset repositories directly host the data files. This is the case for the `C4 <https://huggingface.co/datasets/allenai/c4>` dataset by AllenAI for example.
+By default, loading the "allenai/c4" dataset will load all the data files.
+But if you want to load only specific files and define your own splits, then you can pass the ``data_files`` parameter to :func:`datasets.load_dataset`:
+
+.. code-block :
+
+    data_files = {"validation": "en/c4-validation.*.json.gz"}
+    c4_validation = load_dataset("allenai/c4", data_files=data_files, split="validation")
+
 Manually downloading files
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
