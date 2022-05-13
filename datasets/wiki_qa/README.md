@@ -2,6 +2,7 @@
 languages:
 - en
 paperswithcode_id: wikiqa
+pretty_name: Wikipedia open-domain Question Answering
 ---
 
 # Dataset Card for "wiki_qa"
@@ -53,8 +54,6 @@ Wiki Question Answering corpus from Microsoft
 [More Information Needed](https://github.com/huggingface/datasets/blob/master/CONTRIBUTING.md#how-to-contribute-to-the-dataset-cards)
 
 ## Dataset Structure
-
-We show detailed information for up to 5 configurations of the dataset.
 
 ### Data Instances
 

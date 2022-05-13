@@ -1,8 +1,9 @@
 ---
 paperswithcode_id: null
+pretty_name: IWSLT 2017
 ---
 
-# Dataset Card for "iwslt2017"
+# Dataset Card for IWSLT 2017
 
 ## Table of Contents
 - [Dataset Description](#dataset-description)
@@ -55,8 +56,6 @@ For each language pair, training and development sets are available through the 
 [More Information Needed](https://github.com/huggingface/datasets/blob/master/CONTRIBUTING.md#how-to-contribute-to-the-dataset-cards)
 
 ## Dataset Structure
-
-We show detailed information for up to 5 configurations of the dataset.
 
 ### Data Instances
 

@@ -2,6 +2,7 @@
 languages:
 - en
 paperswithcode_id: wikisplit
+pretty_name: WikiSplit
 ---
 
 # Dataset Card for "wiki_split"
@@ -55,8 +56,6 @@ the dataset contains some inherent noise, it can serve as valuable training data
 [More Information Needed](https://github.com/huggingface/datasets/blob/master/CONTRIBUTING.md#how-to-contribute-to-the-dataset-cards)
 
 ## Dataset Structure
-
-We show detailed information for up to 5 configurations of the dataset.
 
 ### Data Instances
 

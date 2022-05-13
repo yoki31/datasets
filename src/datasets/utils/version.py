@@ -1,4 +1,3 @@
-# coding=utf-8
 # Copyright 2020 The HuggingFace Datasets Authors and the TensorFlow Datasets Authors.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -41,6 +40,12 @@ class Version:
         major (:obj:`str`):
         minor (:obj:`str`):
         patch (:obj:`str`):
+
+    Example:
+
+    ```py
+    >>> VERSION = datasets.Version("1.0.0")
+    ```
     """
 
     version_str: str
@@ -102,7 +107,7 @@ class Version:
 
     @classmethod
     def from_dict(cls, dic):
-        field_names = set(f.name for f in dataclasses.fields(cls))
+        field_names = {f.name for f in dataclasses.fields(cls)}
         return cls(**{k: v for k, v in dic.items() if k in field_names})
 
 

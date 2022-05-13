@@ -2,6 +2,7 @@
 languages:
 - en
 paperswithcode_id: semeval-2010-task-8
+pretty_name: SemEval-2010 Task 8
 ---
 
 # Dataset Card for "sem_eval_2010_task_8"
@@ -55,8 +56,6 @@ and to provide a standard testbed for future research.
 [More Information Needed](https://github.com/huggingface/datasets/blob/master/CONTRIBUTING.md#how-to-contribute-to-the-dataset-cards)
 
 ## Dataset Structure
-
-We show detailed information for up to 5 configurations of the dataset.
 
 ### Data Instances
 

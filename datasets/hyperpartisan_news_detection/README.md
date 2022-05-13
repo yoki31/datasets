@@ -2,6 +2,7 @@
 languages:
 - en
 paperswithcode_id: null
+pretty_name: HyperpartisanNewsDetection
 ---
 
 # Dataset Card for "hyperpartisan_news_detection"
@@ -58,8 +59,6 @@ There are 2 parts:
 [More Information Needed](https://github.com/huggingface/datasets/blob/master/CONTRIBUTING.md#how-to-contribute-to-the-dataset-cards)
 
 ## Dataset Structure
-
-We show detailed information for up to 5 configurations of the dataset.
 
 ### Data Instances
 

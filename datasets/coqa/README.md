@@ -2,6 +2,7 @@
 languages:
 - en
 paperswithcode_id: coqa
+pretty_name: Conversational Question Answering Challenge
 ---
 
 # Dataset Card for "coqa"
@@ -53,8 +54,6 @@ CoQA: A Conversational Question Answering Challenge
 [More Information Needed](https://github.com/huggingface/datasets/blob/master/CONTRIBUTING.md#how-to-contribute-to-the-dataset-cards)
 
 ## Dataset Structure
-
-We show detailed information for up to 5 configurations of the dataset.
 
 ### Data Instances
 

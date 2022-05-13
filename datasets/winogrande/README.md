@@ -2,6 +2,7 @@
 languages:
 - en
 paperswithcode_id: winogrande
+pretty_name: WinoGrande
 ---
 
 # Dataset Card for "winogrande"
@@ -56,8 +57,6 @@ commonsense reasoning.
 [More Information Needed](https://github.com/huggingface/datasets/blob/master/CONTRIBUTING.md#how-to-contribute-to-the-dataset-cards)
 
 ## Dataset Structure
-
-We show detailed information for up to 5 configurations of the dataset.
 
 ### Data Instances
 

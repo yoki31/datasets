@@ -14,18 +14,17 @@ size_categories:
 source_datasets:
 - original
 task_categories:
-- conditional-text-generation
+- text2text-generation
 - text-retrieval
 task_ids:
 - document-retrieval
-- explanation-generation
 - fact-checking-retrieval
-- other-stuctured-to-text
 - text-simplification
 paperswithcode_id: null
+pretty_name: Times of India News Headlines
 ---
 
-# Dataset Card for [Needs More Information]
+# Dataset Card for Times of India News Headlines
 
 ## Table of Contents
 - [Dataset Description](#dataset-description)

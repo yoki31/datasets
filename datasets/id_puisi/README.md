@@ -14,12 +14,13 @@ size_categories:
 source_datasets:
 - original
 task_categories:
-- conditional-text-generation
-- sequence-modeling
+- text2text-generation
+- text-generation
+- fill-mask
 task_ids:
-- language-modeling
-- other-stuctured-to-text
+- text2text-generation-other-poem-generation
 paperswithcode_id: null
+pretty_name: Indonesian Puisi
 ---
 
 # Dataset Card for id_puisi

@@ -8,10 +8,10 @@ from datasets import config
 from datasets.builder import DatasetBuilder
 from datasets.commands import BaseDatasetsCLICommand
 from datasets.load import dataset_module_factory, import_main_class
-from datasets.utils.download_manager import DownloadConfig, GenerateMode
+from datasets.utils.download_manager import DownloadConfig, DownloadMode
 
 
-def run_beam_command_factory(args):
+def run_beam_command_factory(args, **kwargs):
     return RunBeamCommand(
         args.dataset,
         args.name,
@@ -22,6 +22,7 @@ def run_beam_command_factory(args):
         args.save_infos,
         args.ignore_verifications,
         args.force_redownload,
+        **kwargs,
     )
 
 
@@ -40,7 +41,7 @@ class RunBeamCommand(BaseDatasetsCLICommand):
             "--beam_pipeline_options",
             type=str,
             default="",
-            help="Beam pipeline options, separated by commas. Example: `--beam_pipeline_options=job_name=my-job,project=my-project`",
+            help="Beam pipeline options, separated by commas. Example:: `--beam_pipeline_options=job_name=my-job,project=my-project`",
         )
         run_beam_parser.add_argument(
             "--data_dir",
@@ -68,6 +69,7 @@ class RunBeamCommand(BaseDatasetsCLICommand):
         save_infos: bool,
         ignore_verifications: bool,
         force_redownload: bool,
+        **config_kwargs,
     ):
         self._dataset = dataset
         self._name = name
@@ -78,6 +80,7 @@ class RunBeamCommand(BaseDatasetsCLICommand):
         self._save_infos = save_infos
         self._ignore_verifications = ignore_verifications
         self._force_redownload = force_redownload
+        self._config_kwargs = config_kwargs
 
     def run(self):
         import apache_beam as beam
@@ -105,7 +108,6 @@ class RunBeamCommand(BaseDatasetsCLICommand):
                         beam_options=beam_options,
                         cache_dir=self._cache_dir,
                         base_path=dataset_module.builder_kwargs.get("base_path"),
-                        namespace=dataset_module.builder_kwargs.get("namespace"),
                     )
                 )
         else:
@@ -116,20 +118,21 @@ class RunBeamCommand(BaseDatasetsCLICommand):
                     beam_options=beam_options,
                     cache_dir=self._cache_dir,
                     base_path=dataset_module.builder_kwargs.get("base_path"),
-                    namespace=dataset_module.builder_kwargs.get("namespace"),
+                    **self._config_kwargs,
                 )
             )
 
         for builder in builders:
             builder.download_and_prepare(
-                download_mode=GenerateMode.REUSE_CACHE_IF_EXISTS
+                download_mode=DownloadMode.REUSE_CACHE_IF_EXISTS
                 if not self._force_redownload
-                else GenerateMode.FORCE_REDOWNLOAD,
+                else DownloadMode.FORCE_REDOWNLOAD,
                 download_config=DownloadConfig(cache_dir=config.DOWNLOADED_DATASETS_PATH),
-                save_infos=self._save_infos,
                 ignore_verifications=self._ignore_verifications,
                 try_from_hf_gcs=False,
             )
+            if self._save_infos:
+                builder._save_infos()
 
         print("Apache beam run successful.")
 

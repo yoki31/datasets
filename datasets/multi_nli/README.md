@@ -18,10 +18,12 @@ size_categories:
 source_datasets:
 - original
 task_categories:
-- text-scoring
+- text-classification
 task_ids:
-- semantic-similarity-scoring
+- natural-language-inference
+- multi-input-text-classification
 paperswithcode_id: multinli
+pretty_name: Multi-Genre Natural Language Inference
 ---
 
 # Dataset Card for Multi-Genre Natural Language Inference (MultiNLI)

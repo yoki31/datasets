@@ -18,6 +18,7 @@ task_categories:
 task_ids:
 - extractive-qa
 paperswithcode_id: arcd
+pretty_name: ARCD
 ---
 
 # Dataset Card for "arcd"
@@ -69,8 +70,6 @@ paperswithcode_id: arcd
 [More Information Needed](https://github.com/huggingface/datasets/blob/master/CONTRIBUTING.md#how-to-contribute-to-the-dataset-cards)
 
 ## Dataset Structure
-
-We show detailed information for up to 5 configurations of the dataset.
 
 ### Data Instances
 

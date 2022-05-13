@@ -2,6 +2,7 @@
 languages:
 - en
 paperswithcode_id: sentiment140
+pretty_name: Sentiment140
 ---
 
 # Dataset Card for "sentiment140"
@@ -54,8 +55,6 @@ sentiment classification. For more detailed information please refer to the pape
 [More Information Needed](https://github.com/huggingface/datasets/blob/master/CONTRIBUTING.md#how-to-contribute-to-the-dataset-cards)
 
 ## Dataset Structure
-
-We show detailed information for up to 5 configurations of the dataset.
 
 ### Data Instances
 

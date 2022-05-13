@@ -2,6 +2,7 @@
 languages:
 - en
 paperswithcode_id: wikisql
+pretty_name: WikiSQL
 ---
 
 # Dataset Card for "wikisql"
@@ -53,8 +54,6 @@ A large crowd-sourced dataset for developing natural language interfaces for rel
 [More Information Needed](https://github.com/huggingface/datasets/blob/master/CONTRIBUTING.md#how-to-contribute-to-the-dataset-cards)
 
 ## Dataset Structure
-
-We show detailed information for up to 5 configurations of the dataset.
 
 ### Data Instances
 

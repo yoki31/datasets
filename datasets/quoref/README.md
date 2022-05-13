@@ -2,6 +2,7 @@
 languages:
 - en
 paperswithcode_id: quoref
+pretty_name: Quoref
 ---
 
 # Dataset Card for "quoref"
@@ -55,8 +56,6 @@ coreferences before selecting the appropriate span(s) in the paragraphs for answ
 [More Information Needed](https://github.com/huggingface/datasets/blob/master/CONTRIBUTING.md#how-to-contribute-to-the-dataset-cards)
 
 ## Dataset Structure
-
-We show detailed information for up to 5 configurations of the dataset.
 
 ### Data Instances
 

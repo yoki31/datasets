@@ -215,46 +215,47 @@ source_datasets:
   - original
 task_categories:
   common_gen:
-  - conditional-text-generation
+  - text2text-generation
   cs_restaurants:
-  - conditional-text-generation
+  - text2text-generation
   dart:
-  - conditional-text-generation
+  - tabular-to-text
   e2e_nlg:
-  - conditional-text-generation
+  - text2text-generation
   mlsum_de:
-  - conditional-text-generation
+  - text2text-generation
   mlsum_es:
-  - conditional-text-generation
+  - text2text-generation
   schema_guided_dialog:
-  - sequence-modeling
+  - text-generation
+  - fill-mask
   totto:
-  - conditional-text-generation
+  - text2text-generation
   web_nlg_en:
-  - conditional-text-generation
+  - tabular-to-text
   web_nlg_ru:
-  - conditional-text-generation
+  - tabular-to-text
   wiki_auto_asset_turk:
-  - conditional-text-generation
+  - text2text-generation
   wiki_lingua_es_en:
-  - conditional-text-generation
+  - text2text-generation
   wiki_lingua_ru_en:
-  - conditional-text-generation
+  - text2text-generation
   wiki_lingua_tr_en:
-  - conditional-text-generation
+  - text2text-generation
   wiki_lingua_vi_en:
-  - conditional-text-generation
+  - text2text-generation
   xsum:
-  - conditional-text-generation
+  - text2text-generation
 task_ids:
   common_gen:
-  - other-stuctured-to-text
+  - other-concepts-to-text
   cs_restaurants:
-  - other-stuctured-to-text
+  - other-intent-to-text
   dart:
-  - other-stuctured-to-text
+  - rdf-to-text
   e2e_nlg:
-  - other-stuctured-to-text
+  - text2text-generation-other-meaning-representation-to-text
   mlsum_de:
   - summarization
   mlsum_es:
@@ -264,9 +265,9 @@ task_ids:
   totto:
   - table-to-text
   web_nlg_en:
-  - other-stuctured-to-text
+  - rdf-to-text
   web_nlg_ru:
-  - other-stuctured-to-text
+  - rdf-to-text
   wiki_auto_asset_turk:
   - text-simplification
   wiki_lingua_es_en:
@@ -280,9 +281,10 @@ task_ids:
   xsum:
   - summarization
 paperswithcode_id: gem
+pretty_name: GEM
 ---
 
-# Dataset Card for "gem"
+# Dataset Card for GEM
 
 ## Table of Contents
 - [Dataset Description](#dataset-description)
@@ -379,8 +381,6 @@ Each example has one `target` per example in its training set, and a set of `ref
 [More Information Needed](https://github.com/huggingface/datasets/blob/master/CONTRIBUTING.md#how-to-contribute-to-the-dataset-cards)
 
 ## Dataset Structure
-
-We show detailed information for up to 5 configurations of the dataset.
 
 ### Data Instances
 

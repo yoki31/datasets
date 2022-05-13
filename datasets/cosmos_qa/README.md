@@ -2,6 +2,7 @@
 languages:
 - en
 paperswithcode_id: cosmosqa
+pretty_name: CosmosQA
 ---
 
 # Dataset Card for "cosmos_qa"
@@ -53,8 +54,6 @@ Cosmos QA is a large-scale dataset of 35.6K problems that require commonsense-ba
 [More Information Needed](https://github.com/huggingface/datasets/blob/master/CONTRIBUTING.md#how-to-contribute-to-the-dataset-cards)
 
 ## Dataset Structure
-
-We show detailed information for up to 5 configurations of the dataset.
 
 ### Data Instances
 
